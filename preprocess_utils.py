@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 def stan(df):
-	'''
+    '''
     Function to standardze dataframe. 
     '''
     numeric = df.select_dtypes(include=["float64", "int64"])
@@ -30,6 +30,6 @@ def pre_process_data(df, enforce_cols=None):
         df = df.assign(**{c: 0 for c in to_add})
     
     # fill all Nan values in dataset with zeros
-    df.fillna(0, inplace=True)
+    #df.fillna(0, inplace=True)
     
     return df
